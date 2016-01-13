@@ -25,3 +25,10 @@ def test_port_v6(ip, port):
 
 #test_port_v6("2001:4860:4860:0:0:8888", 80)
 #test_port_v4("127.0.0.1", 80)
+
+def get_ip_6(host, port=0):
+  # search for all addresses, but take only the v6 ones
+  alladdr = socket.getaddrinfo(host,port)
+  print(alladdr)
+ 
+#print(get_ip_6('google.com', 80))
